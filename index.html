@@ -594,8 +594,8 @@
     const isWeekday = day >= 1 && day <= 5;
     const isOpen = isWeekday && mins >= open && mins < close;
 
-    // needle: -78deg points into red (closed), +78deg into green (open)
-    const angle = isOpen ? 78 : -78;
+    // needle: -55deg points into red (closed), +55deg into green (open)
+    const angle = isOpen ? 55 : -55;
     requestAnimationFrame(() => { needle.style.transform = 'rotate(' + angle + 'deg)'; });
 
     if (isOpen) {
