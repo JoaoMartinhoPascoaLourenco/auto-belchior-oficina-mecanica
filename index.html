@@ -261,14 +261,10 @@
     <!-- live status gauge (signature) -->
     <div class="ha ha-up ha-d7 relative z-10 mt-10 lg:mt-16 flex items-center gap-4">
       <svg viewBox="0 0 200 130" class="w-[120px] h-[78px]" aria-hidden="true">
-        <defs>
-          <marker id="arrowhead" markerWidth="8" markerHeight="7" refX="4" refY="7" orient="auto">
-            <polygon points="0 0, 8 0, 4 7" fill="#fff" opacity=".95"/>
-          </marker>
-        </defs>
         <path d="M20 110 A80 80 0 0 1 100 30" fill="none" stroke="#E2483D" stroke-width="9" stroke-linecap="round" opacity=".9"/>
         <path d="M100 30 A80 80 0 0 1 180 110" fill="none" stroke="#18A957" stroke-width="9" stroke-linecap="round" opacity=".9"/>
-        <line id="needle" x1="100" y1="110" x2="100" y2="43" stroke="#fff" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+        <!-- needle: shaft narrows to a point — single path, no marker alignment issues -->
+        <path id="needle" d="M98.5 107 L98 62 L100 41 L102 62 L101.5 107 Z" fill="#fff"/>
         <circle cx="100" cy="110" r="7" fill="#151518" stroke="#fff" stroke-width="2"/>
       </svg>
       <div>
